@@ -1,0 +1,21 @@
+1.No module named 'fastai.transforms'
+https://forums.fast.ai/t/howto-installation-on-windows/10439
+Whilst Windows isn’t officially supported for fastai or the lessons at this stage, it does seem to be working now so those with the patience and boldness to venture into something a little new and somewhat untested, here’s instructions on getting started running on a GPU on Windows. (NB: most people using Windows on their laptops are advised to use a cloud GPU provider like Paperspace - accessing a cloud provider from Windows is well supported and tested for this course).
+
+You must have an Nvidia GPU installed, and have installed the most recent Nvidia drivers
+Install Anaconda (Python 3.6) using the 64-bit graphical installer 776. Choose the option to install for “this user only”
+Install Git for Windows 905
+Run Anaconda Prompt from your start menu, and type:
+git clone https://github.com/fastai/fastai.git
+Once the repo is cloned, you’re ready to set up fastai:
+cd fastai
+conda env update
+Activate your new environment (NB: you must type this command every time you run Anaconda):
+activate fastai
+Install ipython widgets into jupyter:
+jupyter nbextension enable --py widgetsnbextension --sys-prefix
+Replace the linux symlink with a Windows one (note that this requires an admin command prompt if you don’t have a fully updated version of Windows 10):
+cd courses\dl1
+del fastai
+mklink /d fastai ..\..\old\fastai
+cd ..\..
