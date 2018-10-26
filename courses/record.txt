@@ -1,0 +1,7 @@
+1
+http://setosa.io/ev/image-kernels/
+http://neuralnetworksanddeeplearning.com/chap4.html
+https://github.com/guruucsd/CNN_visualization
+https://forums.fast.ai/t/understanding-softmax-probabilities-output-on-a-multi-class-classification-problem/8194
+
+2
