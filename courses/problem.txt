@@ -19,3 +19,12 @@ cd courses\dl1
 del fastai
 mklink /d fastai ..\..\old\fastai
 cd ..\..
+
+2.
+No module named 'bcolz' -> pip install bcolz
+No module named 'graphviz' -> pip install graphviz
+No module named 'sklearn_pandas' -> pip install sklearn_pandas
+No module named 'isoweek' -> pip install isoweek
+No module named 'pandas_summary' -> pip install pandas_summary
+No module named 'tqdm' -> pip install tqdm
+No module named 'torchtext' -> pip install torchtext
