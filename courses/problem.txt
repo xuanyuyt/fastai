@@ -28,3 +28,13 @@ No module named 'isoweek' -> pip install isoweek
 No module named 'pandas_summary' -> pip install pandas_summary
 No module named 'tqdm' -> pip install tqdm
 No module named 'torchtext' -> pip install torchtext
+
+3.The error was: “[sprintf] expecting number but found string” See error console for details.”
+pip install nbclean
+
+import nbclean as nbc
+path_original_notebook = 'D:/tyang/fastai/courses/dl1/lesson1_.ipynb'
+path_save = 'D:/tyang/fastai/courses/dl1/lesson1_.ipynb'
+ntbk = nbc.NotebookCleaner(path_original_notebook)
+ntbk.clear('output')
+ntbk.save(path_save)
