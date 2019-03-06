@@ -1,6 +1,7 @@
 import pytest, fastai, shutil
+from fastai.gen_doc.doctest import this_tests
 from fastai.datasets import *
-from fastai.datasets import Config, _expand_path, _url2tgz, _url2path
+from fastai.datasets import Config, _expand_path
 from pathlib import Path
 
 
@@ -9,17 +10,8 @@ def clean_path(path):
     if path.is_file(): path.unlink()
     if path.is_dir(): shutil.rmtree(path)
 
-@pytest.mark.parametrize("dataset", [
-    'adult', 'mnist', 'movie_lens',
-    # 'imdb',  # imdb fails unless 'en' spacy language is available
-])
-
-def test_get_samples(dataset, tmpdir):
-    method = f'get_{dataset}'
-    df = getattr(URLs, method)()
-    assert df is not None
-
 def test_creates_config():
+    this_tests(Config)
     DEFAULT_CONFIG_PATH = 'config_test/test.yml'
 
     try:
@@ -30,4 +22,3 @@ def test_creates_config():
         assert config_path.exists(), "Config.get should create config if it doesn't exist"
     finally:
         clean_path(config_path)
-

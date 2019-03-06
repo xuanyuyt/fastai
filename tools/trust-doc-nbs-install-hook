@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 
 # This script facilitates trusting notebooks under examples.
 #
@@ -28,6 +28,6 @@ from pathlib import Path
 fin  = Path("tools")/"trust-doc-nbs"
 fout = Path(".git")/"hooks"/"post-merge"
 
-print("Installing .git/hooks/post-merge to automatically trust examples notebooks")
+print("Installing .git/hooks/post-merge to automatically trust examples and docs_src notebooks")
 copy2(fin, fout)
 print("Success")

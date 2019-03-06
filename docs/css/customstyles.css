@@ -290,6 +290,12 @@ ul#results-container a:hover {
     margin: 3px;
 }
 
+a.source_link {
+    float:right;
+    font-size:15px;
+    font-weight:normal;
+}
+
 div#toc ul {
     font-size: 90%;
     background-color: whitesmoke;
@@ -305,7 +311,6 @@ div#toc ul li {
     margin: 8px 0px 8px 22px;
     font-size: 100%;
     list-style-type: none;
-    //list-style: square;
 }
 
 div#toc ul li ul {
@@ -315,10 +320,6 @@ div#toc ul li ul {
     padding-bottom: 0px;
     list-style-type: none;
 }
-
-//div#toc ul li ul li::before {
-//    content: "–  ";
-//}
 
 div#toc ul li ul li.hide_content::before {
     content: none;
@@ -1258,7 +1259,7 @@ h4.panel-title {
     }
 }
 
-.input_area  pre {
+.input_area pre {
         padding-bottom: 3;
         margin-top: 10px;
         background-color: #f5f1e0;
@@ -1271,6 +1272,16 @@ h4.panel-title {
         border: 0px;
         padding-left: 2em;
 }
+.pytest_card {
+    padding: 10px 1em 4px 1em;
+    background-color: #eef2ff;
+    border-radius: 5px;
+    /* border-left: 5px solid #eef2ff;
+    border-right: 5px solid #eef2ff; */
+}
+.pytest_card .close {
+    color: #000
+}
 blockquote {
         font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
 }
@@ -1279,4 +1290,24 @@ blockquote code {
 }
 h4 code {
         background-color: white;
+}
+
+/* Google Custom Search styling */
+
+#gcs-search-container {
+    width: 340px !important; /* ToDo: define width without using absolute px value */
+    display: inline-block !important;
+}
+
+.gsc-search-box.gsc-search-box-tools table {
+  margin-bottom: 0px !important;
+}
+.gsc-input, .gsc-search-button {
+    padding: 0;
+}
+.gsc-control-cse {
+    padding: 6px !important;
+}
+input.gsc-input {
+    font-size: 12px !important;
 }

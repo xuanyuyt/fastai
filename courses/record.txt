@@ -10,3 +10,6 @@ conda install -c conda-forge jupyter_contrib_nbextensions
 conda install -c conda-forge jupyter_nbextensions_configurator
 勾选Hinterland即启用了代码自动补全
 Collapsible Headings 标题折叠
+
+3
+pip install kaggle-cli --upgrade
